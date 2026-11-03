@@ -1,0 +1,77 @@
+/*
+ * HeroUI Pro Theme
+ * Add this to your globals.css after importing @heroui/styles
+ * Only includes variables customized from the selected theme
+ * @see https://heroui.com/docs/react/getting-started/theming
+ */
+
+/*
+ * Font: Inter
+ * Load this font in your app:
+ * <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+ */
+:root,
+.light,
+.default,
+[data-theme="light"],
+[data-theme="default"] {
+  /* Theme Colors */
+  --background: oklch(97.02% 0.02 257.22);
+  --muted: oklch(55.17% 0.04 257.22);
+  --scrollbar: oklch(87.1% 0.02 257.22);
+  --surface-secondary: oklch(95.24% 0.03 257.22);
+  --surface-tertiary: oklch(93.73% 0.03 257.22);
+  --default: oklch(94% 0.02 257.22);
+  --accent: oklch(55.71% 0.1874 257.22);
+  --success: oklch(73.29% 0.2012 151.22);
+  --warning: oklch(78.19% 0.1648 72.74);
+  --danger: oklch(65.32% 0.2421 26.15);
+  --field-border: oklch(90% 0.02 257.22);
+  --border: oklch(90% 0.02 257.22);
+  --separator: oklch(92% 0.02 257.22);
+  --focus: oklch(55.71% 0.1874 257.22);
+  --accent-soft: color-mix(
+    in oklab,
+    oklch(55.71% 0.1874 257.22) 15%,
+    transparent
+  );
+  --accent-hover: color-mix(
+    in oklab,
+    oklch(55.71% 0.1874 257.22) 90%,
+    var(--snow) 10%
+  );
+}
+
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+  /* Theme Colors */
+  --background: oklch(12% 0.02 257.22);
+  --muted: oklch(70.5% 0.04 257.22);
+  --scrollbar: oklch(70.5% 0.02 257.22);
+  --surface: oklch(21.03% 0.04 257.22);
+  --surface-secondary: oklch(25.7% 0.03 257.22);
+  --surface-tertiary: oklch(27.21% 0.03 257.22);
+  --overlay: oklch(21.03% 0.04 257.22);
+  --default: oklch(27.4% 0.02 257.22);
+  --accent: oklch(55.71% 0.1874 257.22);
+  --success: oklch(73.29% 0.2012 151.22);
+  --warning: oklch(82.03% 0.1444 76.75);
+  --danger: oklch(59.4% 0.2046 25.04);
+  --field-background: oklch(21.03% 0.04 257.22);
+  --field-border: oklch(28% 0.02 257.22);
+  --segment: oklch(39.64% 0.02 257.22);
+  --border: oklch(28% 0.02 257.22);
+  --separator: oklch(25% 0.02 257.22);
+  --focus: oklch(55.71% 0.1874 257.22);
+  --accent-soft: color-mix(
+    in oklab,
+    oklch(55.71% 0.1874 257.22) 15%,
+    transparent
+  );
+  --accent-hover: color-mix(
+    in oklab,
+    oklch(55.71% 0.1874 257.22) 90%,
+    var(--snow) 10%
+  );
+}
