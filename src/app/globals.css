@@ -661,6 +661,7 @@ h1 span {
   gap: 8px;
 }
 .mobile-links .link {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding-block: 15px;
@@ -668,6 +669,13 @@ h1 span {
 }
 .navigation-dialog {
   width: min(440px, calc(100vw - 32px));
+}
+
+.link.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
 }
 
 @media (min-width: 1440px) {
@@ -685,7 +693,7 @@ h1 span {
   .desktop-links {
     gap: 20px;
   }
-  .desktop-cta {
+  .nav-actions .desktop-cta {
     display: none;
   }
   .feature-card {
@@ -904,11 +912,4 @@ h1 span {
   html {
     scroll-behavior: auto;
   }
-}
-
-.link.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
 }
