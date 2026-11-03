@@ -1,10 +1,17 @@
 import { resolve, sep } from "node:path";
 
-const root = resolve("dist");
+const root = resolve("out");
 Bun.serve({
   port: 4174,
   async fetch(request) {
-    const pathname = decodeURIComponent(new URL(request.url).pathname);
+    let pathname = decodeURIComponent(new URL(request.url).pathname);
+    const site = new URL(
+      process.env.SITE_URL ?? "https://payloadbay.github.io/website/",
+    );
+    const base = site.pathname.replace(/\/$/, "");
+    if (base && (pathname === base || pathname.startsWith(base + "/")))
+      pathname = pathname.slice(base.length) || "/";
+    if (pathname.endsWith("/")) pathname += "index.html";
     const path = resolve(
       root,
       `.${pathname === "/" ? "/index.html" : pathname}`,

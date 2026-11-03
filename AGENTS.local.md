@@ -4,9 +4,11 @@ This repository is Payload Bay's standalone static marketing site. Do not add
 landing routes to the product app or bundle this site in its operator images.
 Read README.md for source/asset provenance and build/preview commands.
 
-Use the canonical brand repository and public HeroUI v3 styles. Keep components
-on their semantic variants and theme tokens. HeroUI BEM composition is intended
-for this static HTML site; do not recreate custom buttons or add Pro dependencies.
+Use the canonical brand repository and public HeroUI v3 React components. Keep
+components on their semantic variants and theme tokens. Use Next.js App Router
+with static export for GitHub Pages. Use real HeroUI controls and Tabler icons,
+matching the product app. Do not invent icons or recreate custom buttons. Keep
+proprietary Pro source out of this public repo.
 Preserve responsive layout, visible keyboard focus, reduced-motion behavior,
 working anchors and accessible mobile navigation. Test at 320px, 390px and desktop.
 

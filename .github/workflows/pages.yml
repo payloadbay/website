@@ -24,7 +24,7 @@ jobs:
       - run: bun run check
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: dist
+          path: out
   deploy:
     if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
     needs: build
